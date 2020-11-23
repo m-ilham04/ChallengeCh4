@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvHead1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comic_sans_ms"
+        android:rotation="-20"
+        android:text="Kertas"
+        android:textColor="@color/blue_bright"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHead2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/comic_sans_ms"
+        android:rotation="-20"
+        android:text="Gunting"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvHead1" />
+
+    <TextView
+        android:id="@+id/tvHead3"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/comic_sans_ms"
+        android:rotation="-20"
+        android:text="Batu"
+        android:textAlignment="center"
+        android:textColor="@color/green_light"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvHead2" />
+
+
+    <TextView
+        android:id="@+id/tvPlayer1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/comic_sans_ms"
+        android:text="Pemain 1"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHead3" />
+
+    <ImageView
+        android:id="@+id/ivStone"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:src="@drawable/ic_batu"
+        app:layout_constraintStart_toStartOf="@id/tvPlayer1"
+        app:layout_constraintTop_toBottomOf="@id/tvPlayer1" />
+
+    <ImageView
+        android:id="@+id/ivPaper"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:src="@drawable/ic_kertas"
+        app:layout_constraintStart_toStartOf="@id/ivStone"
+        app:layout_constraintTop_toBottomOf="@id/ivStone" />
+
+    <ImageView
+        android:id="@+id/ivScissor"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:src="@drawable/ic_gunting"
+        app:layout_constraintStart_toStartOf="@id/ivPaper"
+        app:layout_constraintTop_toBottomOf="@id/ivPaper"
+
+        />
+
+    <!-- These TextView(S) change depend on condition -->
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:fontFamily="@font/comic_sans_ms"
+        android:gravity="center"
+        android:rotation="-30"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/tvVs"
+        app:layout_constraintEnd_toStartOf="@id/ivPaperCom"
+        app:layout_constraintStart_toEndOf="@id/ivPaper"
+        app:layout_constraintTop_toTopOf="@id/tvVs" />
+
+    <TextView
+        android:id="@+id/tvVs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:fontFamily="@font/comic_sans_ms"
+        android:gravity="center"
+        android:rotation="-30"
+        android:text="VS"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="80sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/ivPaper"
+        app:layout_constraintEnd_toStartOf="@id/ivPaperCom"
+        app:layout_constraintStart_toEndOf="@id/ivPaper" />
+
+    <!-- changing text view end here -->
+
+    <TextView
+        android:id="@+id/tvCom"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/comic_sans_ms"
+        android:text="COM"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHead3" />
+
+    <ImageView
+        android:id="@+id/ivBgStoneCom"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/bg_picked"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/tvCom"
+        app:layout_constraintTop_toBottomOf="@id/tvCom" />
+
+    <ImageView
+        android:id="@+id/ivStoneCom"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_batu"
+        app:layout_constraintStart_toStartOf="@id/tvCom"
+        app:layout_constraintTop_toBottomOf="@id/tvCom" />
+
+    <ImageView
+        android:id="@+id/ivBgPaperCom"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/bg_picked"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/ivStoneCom"
+        app:layout_constraintTop_toBottomOf="@id/ivStoneCom" />
+
+    <ImageView
+        android:id="@+id/ivPaperCom"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_kertas"
+        app:layout_constraintStart_toStartOf="@id/ivStoneCom"
+        app:layout_constraintTop_toBottomOf="@id/ivStoneCom" />
+
+    <ImageView
+        android:id="@+id/ivBgScissorCom"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/bg_picked"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/ivPaperCom"
+        app:layout_constraintTop_toBottomOf="@id/ivPaperCom" />
+
+    <ImageView
+        android:id="@+id/ivScissorCom"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_gunting"
+        app:layout_constraintStart_toStartOf="@id/ivPaperCom"
+        app:layout_constraintTop_toBottomOf="@id/ivPaperCom" />
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivReset"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:src="@drawable/ic_refresh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

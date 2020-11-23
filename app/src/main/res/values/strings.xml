@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Permainan Roshambo</string>
+    <string name="result1">Pemain 1 MENANG!</string>
+    <string name="result2">Pemain 2 MENANG!</string>
+    <string name="result3">DRAW!</string>
+</resources>
